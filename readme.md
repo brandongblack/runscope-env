@@ -11,8 +11,11 @@ You can use the personal access token when you have created the application
 Once you have the token, fill the variables in the runscope_config.py file
 
  ```master_bucket_key```:  The bucket key to export from 
+
  ```master_env_id```:  The UUID of the shared environment to export 
+
  ```runscope_token```:  Runscope API token 
+ 
  ```runscope_dest_bucket```:  The bucket to copy to 
 
 # Usage
