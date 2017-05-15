@@ -12,10 +12,9 @@
 import sys
 import json
 import requests
+from runscope_config import *
 
-runscope_token = 'RUNSCOPE_PERSONAL_ACCESS_TOKEN'
-runscope_bucket = 'BUCKET_KEY_TO_WRITE_TO'
-url = 'https://api.runscope.com/buckets/' + runscope_bucket + '/environments'
+url = 'https://api.runscope.com/buckets/' + runscope_dest_bucket + '/environments'
 
 
 
@@ -27,9 +26,9 @@ def upload_env(file_name):
 	headers = dict(Authorization='Bearer ' + runscope_token)
 	r = requests.post(url, headers=headers, json=env_data['data'])
 	if r.status_code == 201:
-		print 'Success - uploaded "' + env_data['data']['name'] + '" to bucket ' + runscope_bucket
+		print 'Success - uploaded "' + env_data['data']['name'] + '" to bucket ' + runscope_dest_bucket
 	else:
-		print 'error: response code' + r.status_code
+		print r.status_code
 
 
 ##------- Run the function above
