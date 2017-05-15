@@ -28,7 +28,7 @@ def upload_env(file_name):
 	if r.status_code == 201:
 		print 'Success - uploaded "' + env_data['data']['name'] + '" to bucket ' + runscope_dest_bucket
 	else:
-		print r.status_code
+		print 'Failure - ' + r.text
 
 
 ##------- Run the function above
