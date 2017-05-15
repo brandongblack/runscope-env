@@ -14,10 +14,6 @@ import requests
 import json
 from runscope_config import *
 
-#master_bucket_key = 'BUCKET_KEY_OF_SHARED_ENVIRONMENT'
-#master_env_id = 'ENVIRONMENT_ID'
-#runscope_token = 'RUNSCOPE_PERSONAL_ACCESS_TOKEN'
-
 url = 'https://api.runscope.com/buckets/' + master_bucket_key + '/environments/' + master_env_id
 headers = dict(Authorization='Bearer ' + runscope_token)
 r = requests.get(url, headers=headers)
